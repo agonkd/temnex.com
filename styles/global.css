@@ -1,0 +1,9 @@
+@import url("https://fonts.cdnfonts.com/css/nasalization-2");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nasalization {
+  font-family: "Nasalization", sans-serif;
+  letter-spacing: 0.15em;
+}
