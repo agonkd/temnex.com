@@ -6,24 +6,31 @@ import {
   FaLinkedin,
   FaApple,
   FaGooglePlay,
-} from "react-icons/fa"; // Importing icons from React Icons
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#26004A] w-full rounded-tr-[50px] text-white p-10 px-24">
-      <div className="flex justify-between items-center border-b border-gray-500 pb-4">
-        <div className="space-x-8">
-          <Link href="/terms-of-service" className="hover:underline">
+    <footer className="bg-[#26004A] w-full rounded-tr-[50px] text-white p-10 md:px-24">
+      <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-500 pb-4">
+        <div className="space-y-0 flex flex-row md:space-x-4 gap-5">
+          <Link
+            href="/terms-of-service"
+            className="hover:underline block md:inline"
+          >
             Terms of Service
           </Link>
-          <Link href="/privacy-policy" className="hover:underline">
+          <Link
+            href="/privacy-policy"
+            className="hover:underline block md:inline"
+          >
             Privacy Policy
           </Link>
-          <Link href="/site-map" className="hover:underline">
+          <Link href="/site-map" className="hover:underline block md:inline">
             Site Map
           </Link>
         </div>
-        <div className="flex items-center space-x-4">
+
+        <div className="flex items-center space-x-4 mt-4 md:mt-0">
           <span>Follow us</span>
           <Link
             href="https://facebook.com"
@@ -60,7 +67,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-8 mt-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
         {/* About Section */}
         <div>
           <h4 className="text-lg font-semibold mb-4">About</h4>
@@ -193,8 +200,6 @@ export default function Footer() {
 
           <h4 className="text-lg font-semibold mb-4">Apps</h4>
           <div className="space-y-2">
-            {" "}
-            {/* Column layout with space between each app */}
             <Link
               href="#"
               className="flex items-center space-x-2 hover:underline"
@@ -213,9 +218,11 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-8 border-t border-gray-500 pt-4 flex justify-between">
-        <span>©Eris Agency All rights reserved.</span>
-        <div className="flex space-x-4">
+      <div className="mt-8 border-t border-gray-500 pt-4 flex flex-col md:flex-row justify-between">
+        <span className="text-center md:text-left">
+          ©Eris Agency All rights reserved.
+        </span>
+        <div className="flex justify-center md:justify-start mt-4 md:mt-0 space-x-4">
           <Link href="#" className="hover:underline">
             US$ USD
           </Link>
