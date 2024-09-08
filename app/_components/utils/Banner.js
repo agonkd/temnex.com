@@ -14,26 +14,28 @@ const Banner = ({
   ...props
 }) => {
   const mergedStyles = twMerge(
-    "w-full px-6 sm:px-12 md:px-24 md:py-16 py-8 flex items-center text-white bg-cover bg-center rounded-xl relative overflow-hidden",
+    "w-full px-8 sm:px-12 md:px-24 md:py-16 py-8 flex items-center text-white bg-cover bg-center rounded-xl relative overflow-hidden",
     background,
     styles
   );
 
   return (
-    <div
-      className={mergedStyles}
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-      {...props}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="relative z-10 space-y-2">
-        <p className={`h5 nasalization ${titleStyles}`}>{title}</p>
-        <p className={`text-sm sm:text-base font-light ${subtitleStyles}`}>
-          {subtitle}
-        </p>
-        {children}
+    <div className="px-8 sm:px-12 md:px-24 lg:px-32 md:py-16 py-8">
+      <div
+        className={mergedStyles}
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+        {...props}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="relative z-10 space-y-2">
+          <p className={`h5 nasalization ${titleStyles}`}>{title}</p>
+          <p className={`text-sm sm:text-base font-light ${subtitleStyles}`}>
+            {subtitle}
+          </p>
+          {children}
+        </div>
       </div>
     </div>
   );
