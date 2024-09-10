@@ -6,6 +6,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import { FaFacebookF, FaGoogle, FaApple } from "react-icons/fa";
 
 const Singup = () => {
+  
   return (
     <Section
       size="large"

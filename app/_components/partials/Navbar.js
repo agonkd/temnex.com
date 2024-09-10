@@ -88,11 +88,13 @@ const Navbar = () => {
     <div className="absolute z-20 w-full">
       <div className="flex items-center justify-around px-8 py-4 text-white">
         <div className="logo">
+        <Link href="/" className="flex items-center justify-center mr-6">
           <img
             src="images/temnex_logo.png"
             alt="Temnex"
             className="w-32"
           />
+          </Link>
         </div>
 
         {/* Burger Menu Icon for mobile */}
@@ -118,9 +120,9 @@ const Navbar = () => {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex space-x-4 items-center">
-          <button className="bg-transparent text-white">Become a Seller</button>
-          <button>Sign in</button>
-          <button className="bg-white text-black py-2 px-4 rounded-full">Join</button>
+          <button className="bg-transparent text-white font-nasalization"><Link href="/sign-up">Become a Seller</Link></button>
+          <button><Link href="/sign-in">Sign in</Link></button>
+          <button className="bg-white text-black py-2 px-4 rounded-full"><Link href="/sign-up">Join</Link></button>
         </div>
       </div>
 
