@@ -6,12 +6,15 @@ import { GoArrowUpRight } from "react-icons/go";
 import { FaFacebookF, FaGoogle, FaApple } from "react-icons/fa";
 
 const Singup = () => {
+<<<<<<< HEAD
   
+=======
+  const toggleForm = () => {
+    setIsLogin((prev) => !prev);
+  };
+>>>>>>> 55f32143ef07e72eea93353c977324da64051b8e
   return (
-    <Section
-      size="large"
-      className="px-0 space-y-16 bg-[url('/images/form-mascot.png')] bg-center bg-cover"
-    >
+    <>
       <div className="text-center leading-none">
         <h1 className="h1 nasalization text-dark">REGISTER HERE</h1>
         <p>
@@ -22,7 +25,7 @@ const Singup = () => {
         <form
           action=""
           method=""
-          className="bg-white w-fit p-8 rounded-lg shadow-xl space-y-4"
+          className="bg-white sm:w-fit w-full p-8 rounded-lg shadow-2xl space-y-4"
         >
           <h2 className="text-lg font-semibold">Let's create your account!</h2>
           <p className="text-sm">
@@ -49,12 +52,12 @@ const Singup = () => {
             <GoArrowUpRight className="text-2xl" />
           </Button>
           <p className="text-center">OR</p>
-          <ul className="flex gap-4">
-            <li className="flex items-center gap-2 border border-blue-500 text-blue-500 text-sm p-3 rounded">
+          <ul className="flex lg:flex-row flex-col gap-4">
+            <li className="flex justify-center items-center gap-2 border border-blue-500 text-blue-500 text-sm p-3 rounded">
               <FaFacebookF />
               Continue with Facebook
             </li>
-            <li className="flex items-center gap-2 border border-red-500 text-red-500 text-sm p-3 rounded">
+            <li className="flex justify-center items-center gap-2 border border-red-500 text-red-500 text-sm p-3 rounded">
               <FaGoogle />
               Continue with Google
             </li>
@@ -65,7 +68,7 @@ const Singup = () => {
           </ul>
         </form>
       </div>
-    </Section>
+    </>
   );
 };
 export default Singup;

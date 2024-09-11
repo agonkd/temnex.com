@@ -13,14 +13,14 @@ const sizeStyles = {
 const Section = ({
   children,
   id = "",
-  size = "large",
+  size = "largest",
   className = "",
   ...props
 }) => {
   const mergedClasses = twMerge(
     "relative w-full", // Default positioning class
     sizeStyles[size], // Apply size-based styles
-    className // Merge with any additional class names
+    className // Allow overriding of size-based styles by placing this first
   );
 
   return (
@@ -33,13 +33,13 @@ const Section = ({
 Section.propTypes = {
   children: PropTypes.node.isRequired,
   id: PropTypes.string,
-  size: PropTypes.oneOf(["small", "medium", "large", "full"]),
+  size: PropTypes.oneOf(["small", "medium", "large", "largest"]), // Corrected size options
   className: PropTypes.string,
 };
 
 Section.defaultProps = {
   id: "",
-  size: "large",
+  size: "largest", // Corrected default size
   className: "",
 };
 
