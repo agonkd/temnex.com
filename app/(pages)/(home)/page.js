@@ -1,4 +1,6 @@
+import Button from "@/app/_components/utils/Button";
 import Card from "@/app/_components/utils/Card";
+import { GoArrowUpRight } from "react-icons/go";
 
 export default function Home() {
   const categories = [
@@ -183,6 +185,17 @@ export default function Home() {
               userName={product.userName}
             />
           ))}
+        </div>
+        <div className="w-full flex justify-center mt-20">
+          <Button
+            type="submit"
+            size="small"
+            variant="transparent"
+            className="rounded-2xl"
+          >
+            All Services
+            <GoArrowUpRight className="text-2xl" />
+          </Button>
         </div>
       </div>
     </div>

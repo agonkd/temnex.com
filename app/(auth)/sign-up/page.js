@@ -1,18 +1,50 @@
+"use client";
 import Section from "@/app/_components/utils/Section";
 import Link from "next/link";
 import constants from "@/app/_components/constants";
 import Button from "@/app/_components/utils/Button";
 import { GoArrowUpRight } from "react-icons/go";
 import { FaFacebookF, FaGoogle, FaApple } from "react-icons/fa";
+import { useState } from "react";
+import { signIn } from "next-auth/react";
 
-const Singup = () => {
-<<<<<<< HEAD
-  
-=======
-  const toggleForm = () => {
-    setIsLogin((prev) => !prev);
+const Signup = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const [error, setError] = useState("");
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
   };
->>>>>>> 55f32143ef07e72eea93353c977324da64051b8e
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      // Call NextAuth's credentials signIn method with email/password
+      const res = await signIn("credentials", {
+        redirect: false,
+        email: formData.email,
+        password: formData.password,
+      });
+  
+      if (res?.error) {
+        setError(res.error);
+      } else {
+        // Success - redirect or handle success response
+        window.location.href = "/dashboard"; // Redirect to dashboard or desired page
+      }
+    } catch (err) {
+      console.error("Error during sign-in", err);
+      setError("An unexpected error occurred.");
+    }
+  };  
+
   return (
     <>
       <div className="text-center leading-none">
@@ -23,8 +55,7 @@ const Singup = () => {
       </div>
       <div className="flex justify-center">
         <form
-          action=""
-          method=""
+          onSubmit={handleSubmit} // Form submission for email/password registration
           className="bg-white sm:w-fit w-full p-8 rounded-lg shadow-2xl space-y-4"
         >
           <h2 className="text-lg font-semibold">Let's create your account!</h2>
@@ -41,12 +72,15 @@ const Singup = () => {
               </label>
               <input
                 type={input.type}
-                id={input.label}
+                id={input.label.toLowerCase()}
                 placeholder={input.placeholder}
                 className="w-full border px-3 py-2 rounded-md mt-2 outline-none placeholder:text-sm"
+                onChange={handleInputChange} // Update form state on input change
+                value={formData[input.label.toLowerCase()]}
               />
             </div>
           ))}
+          {error && <p className="text-red-500">{error}</p>}
           <Button type="submit" size="full">
             Create Account
             <GoArrowUpRight className="text-2xl" />
@@ -57,7 +91,10 @@ const Singup = () => {
               <FaFacebookF />
               Continue with Facebook
             </li>
-            <li className="flex justify-center items-center gap-2 border border-red-500 text-red-500 text-sm p-3 rounded">
+            <li
+              className="flex justify-center items-center gap-2 border border-red-500 text-red-500 text-sm p-3 rounded cursor-pointer"
+              onClick={() => signIn("google")} // Trigger Google OAuth login
+            >
               <FaGoogle />
               Continue with Google
             </li>
@@ -71,4 +108,5 @@ const Singup = () => {
     </>
   );
 };
-export default Singup;
+
+export default Signup;
