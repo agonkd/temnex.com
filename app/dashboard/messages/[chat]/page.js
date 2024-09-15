@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import Image from 'next/image';
@@ -66,3 +67,44 @@ const Chat = () => {
 }
 
 export default Chat;
+=======
+import React from 'react'
+import { IoIosCheckmark } from "react-icons/io";
+
+const Chat = ({ params }) => {
+    return (
+        <div className='w-full h-full absolute top-0 left-0 box-border space-y-6 overflow-y-scroll text-lg font-light text-gray-700 p-6'>
+            <div className='max-w-[60%] px-3 py-2 whitespace-break-spaces rounded-bl rounded-xl bg-gray-50 shadow-lg'>
+                It contains a lot of good lessons about effective practices
+                <span className='flex items-center text-sm mt-2 text-grey'><IoIosCheckmark className='text-2xl' />3:14am</span>
+            </div>
+            <div className='ml-auto max-w-[60%] px-3 py-2 whitespace-break-spaces rounded-br rounded-xl bg-gray-200 shadow-lg'>
+                Can it generate daily design links that include essays and data visualizations ?
+                <span className='flex items-center text-sm mt-2 text-grey'><IoIosCheckmark className='text-2xl' />3:14am</span>
+            </div>
+            <div className='ml-auto max-w-[60%] px-3 py-2 whitespace-break-spaces rounded-br rounded-xl bg-gray-200 shadow-lg'>
+                Can it generate daily design links that include essays and data visualizations ?
+                <span className='flex items-center text-sm mt-2 text-grey'><IoIosCheckmark className='text-2xl' />3:14am</span>
+            </div>
+            <div className='max-w-[60%] px-3 py-2 whitespace-break-spaces rounded-bl rounded-xl bg-gray-50 shadow-lg'>
+                Yeah! Responsive Design is geared towards those trying to build web apps
+                <span className='flex items-center text-sm mt-2 text-grey'><IoIosCheckmark className='text-2xl' />3:14am</span>
+            </div>
+            <div className='ml-auto max-w-[60%] px-3 py-2 whitespace-break-spaces rounded-br rounded-xl bg-gray-200 shadow-lg'>
+                Excellent, I want it now !
+                <span className='flex items-center text-sm mt-2 text-grey'><IoIosCheckmark className='text-2xl' />3:14am</span>
+            </div>
+            <div className='max-w-[60%] px-3 py-2 whitespace-break-spaces rounded-bl rounded-xl bg-gray-50 shadow-lg'>
+                Yeah! Responsive Design is geared towards those trying to build web apps
+                <span className='flex items-center text-sm mt-2 text-grey'><IoIosCheckmark className='text-2xl' />3:14am</span>
+            </div>
+            <div className='max-w-[60%] px-3 py-2 whitespace-break-spaces rounded-bl rounded-xl bg-gray-50 shadow-lg'>
+                Yeah! Responsive Design is geared towards those trying to build web apps
+                <span className='flex items-center text-sm mt-2 text-grey'><IoIosCheckmark className='text-2xl' />3:14am</span>
+            </div>
+        </div>
+    )
+}
+
+export default Chat
+>>>>>>> a171a4f (Dashboard)

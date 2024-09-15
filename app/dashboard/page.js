@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react';
+<<<<<<< HEAD
 import constants from '../_components/constants';
 import { FaBell } from "react-icons/fa";
 import { MdDone } from 'react-icons/md';
@@ -78,6 +79,57 @@ const Dashboard = () => {
             <div className='rounded-xl grid lg:grid-cols-4 md:grid-cols-2 md:gap-6 gap-4'>
                 {constants.tinyCards.map((item, index) => (
                     <div key={index} className='bg-white md:px-6 p-4 rounded-xl flex justify-between items-center flex-row md:gap-6 gap-4'>
+=======
+import { BiSolidCreditCard } from "react-icons/bi";
+import { IoMdKey } from "react-icons/io";
+import { PiFilesFill } from "react-icons/pi";
+import { FaArrowUpLong, FaCheck, FaEllipsisVertical, FaBell, FaCartShopping } from "react-icons/fa6";
+import { CiDatabase } from "react-icons/ci";
+import { Line, Bar } from 'react-chartjs-2';
+import constants from '../_components/constants';
+
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    BarElement
+} from 'chart.js';
+import Table from '../_components/utils/Table';
+
+// Register Chart.js components
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    BarElement
+);
+
+const Dashboard = () => {
+
+    const columns = ['COMPANIES', 'MEMBERS', 'BUDGET', 'COMPLETION', 'ACTIONS'];
+    const data = [
+        ['Soft UI XD Version', '', '$14,000', '60%'],
+        ['Soft UI XD Version', '', '$14,000', '60%'],
+        ['Soft UI XD Version', '', '$14,000', '60%'],
+        ['Soft UI XD Version', '', '$14,000', '60%'],
+        ['Soft UI XD Version', '', '$14,000', '60%'],
+    ];
+
+    return (
+        <div className='md:space-y-6 space-y-4'>
+            <div className='grid xl:grid-cols-4 lg:grid-cols-2 md:gap-6 gap-4'>
+                {constants.tabs.map((tab, index) => (
+                    <div key={index} className='bg-white p-6 rounded-xl flex justify-between'>
+>>>>>>> a171a4f (Dashboard)
                         <div>
                             <span className='text-grey'>{item.label}</span>
                             <p className="text-xl font-medium text-dark">
@@ -94,20 +146,40 @@ const Dashboard = () => {
                 ))}
             </div>
             <div className='grid lg:grid-cols-5 md:gap-6 gap-4'>
+<<<<<<< HEAD
                 <div className='lg:col-span-2 bg-white md:p-6 p-4 rounded-xl md:space-y-6 space-y-4'>
                     <div className='bg-gray-100 p-3 rounded-lg relative aspect-[3/1]'>
                         <Line data={lineChartData} options={chartOptions} />
+=======
+                <div className='bg-white lg:col-span-2 p-6 rounded-xl space-y-6'>
+                    <div id="chart-one" className='w-full aspect-[3/1] rounded-lg'>
+                        <Line data={constants.chartOneData} options={constants.chartOneOptions} />
+>>>>>>> a171a4f (Dashboard)
                     </div>
                     <div>
                         <p className='text-lg text-dark'>Active Users</p>
                         <p className='text-sm text-grey'><span className='font-semibold'>(+23%)</span> than last week</p>
                     </div>
+<<<<<<< HEAD
                     <ul className='grid xl:grid-cols-4 md:gap-6 gap-4'>
                         {constants.tinyCards.map((item, index) => (
                             <li key={index} className='space-y-4'>
                                 <div className='flex items-center gap-1'>
                                     <span className='p-1 bg-pink-500 text-white text-xs rounded'><FaBell /></span>
                                     <span className='font-light text-sm'>{item.label}</span>
+=======
+                    <ul className='grid xl:grid-cols-4 lg:grid-cols-2 gap-6'>
+                        {constants.graphTabs.map((tab, index) => (
+                            <li key={index}>
+                                <div className='flex items-center gap-2 text-sm text-dark'>
+                                    <span
+                                        className='w-6 h-6 rounded flex justify-center items-center text-white shadow'
+                                        style={{ backgroundColor: tab.icon[1] }}
+                                    >
+                                        {tab.icon[0]}
+                                    </span>
+                                    {tab.title}
+>>>>>>> a171a4f (Dashboard)
                                 </div>
                                 <div className='space-y-2'>
                                     <p className='text-xl font-semibold'>{item.value}</p>
@@ -124,8 +196,13 @@ const Dashboard = () => {
                         <p className='text-lg'>Sales Overview</p>
                         <p className='text-grey'><span className='font-semibold'>4% more</span> in 2021</p>
                     </div>
+<<<<<<< HEAD
                     <div className='relative w-full h-full'>
                         <Bar data={barChartData} options={chartOptions} />
+=======
+                    <div id="chart-two" className='h-full'>
+                        <Bar data={constants.chartTwoData} options={constants.chartTwoOptions} />
+>>>>>>> a171a4f (Dashboard)
                     </div>
                 </div>
             </div>
@@ -142,7 +219,11 @@ const Dashboard = () => {
                         </div>
                         <IoEllipsisVerticalSharp className="text-xl" />
                     </div>
+<<<<<<< HEAD
                     <Table columns={constants.tableData.columns} data={constants.tableData.rows} />
+=======
+                    <Table columns={columns} data={data} />
+>>>>>>> a171a4f (Dashboard)
                 </div>
                 <ul className='bg-white md:p-6 p-4 rounded-xl md:space-y-6 space-y-4'>
                     <div className='space-y-2'>
