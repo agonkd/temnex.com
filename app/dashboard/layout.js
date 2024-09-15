@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
                         <Image src="https://placehold.co/50x50" width={50} height={50} unoptimized alt='profile' className='rounded-full md:p-0 p-1'></Image>
 =======
         <section className="bg-gray-100 h-screen md:p-6 p-4 flex md:gap-6 gap-4">
-            <aside className="bg-white md:w-72 w-full h-full rounded-xl p-4">
+            <aside className="bg-white md:w-72 h-full rounded-xl p-4">
                 <ul className="space-y-4">
                     <li className="flex lg:flex-row flex-col items-center gap-4 pb-4 border-b border-gray-200">
                         <Image

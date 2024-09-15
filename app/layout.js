@@ -23,10 +23,14 @@ export default function RootLayout({ children }) {
 =======
         <html lang="en">
             <body className={`${dm_sans.className}`}>
-                {/* <Navbar /> */}
+                <Navbar />
                 {children}
+<<<<<<< HEAD
                 {/* <Footer /> */}
 >>>>>>> a171a4f (Dashboard)
+=======
+                <Footer />
+>>>>>>> a9f450d (bugs)
             </body>
         </html>
     );

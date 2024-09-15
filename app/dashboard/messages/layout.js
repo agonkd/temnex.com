@@ -63,7 +63,7 @@ import Button from "@/app/_components/utils/Button";
 
 const Layout = ({ children }) => {
     return (
-        <div className="h-full grid grid-cols-3 md:gap-6 gap-4">
+        <div className="h-full md:grid grid-cols-3 flex bg-white md:bg-transparent md:gap-6 gap-4 rounded-xl">
             <nav className="h-full bg-white p-6 rounded-xl space-y-6 static top-16">
                 <form action="">
                     <p className="text-lg mb-2">Friends</p>
@@ -85,7 +85,7 @@ const Layout = ({ children }) => {
                 </ul>
             </nav>
             <div className="bg-white col-span-2 rounded-xl flex flex-col justify-between">
-                <nav className="p-6 flex justify-between items-center border-b shadow-lg">
+                <nav className="p-6 flex justify-between items-center border-b md:shadow-lg">
                     <div className="flex gap-3">
                         <Image src="https://placehold.co/50x50" width={50} height={50} unoptimized className="rounded-xl" />
                         <div>
