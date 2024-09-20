@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
                     <li className='pb-3 flex items-center gap-3 border-b'>
                         <Image src="https://placehold.co/50x50" width={50} height={50} unoptimized alt='profile' className='rounded-full md:p-0 p-1'></Image>
                         <div className='md:block hidden'>
-                            <p>Agon Kadriu</p>
+                            <p>Adrian Koshi</p>
                             <span className='text-sm text-grey'>agon@email.com</span>
                         </div>
                     </li>
