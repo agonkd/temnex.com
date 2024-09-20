@@ -12,7 +12,6 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-<<<<<<< HEAD
         <html lang="en" className="overflow-x-hidden">
             <body className={`${dm_sans.className}`}>
                 <Navbar />
@@ -20,17 +19,6 @@ export default function RootLayout({ children }) {
                     {children}
                 </main>
                 <Footer />
-=======
-        <html lang="en">
-            <body className={`${dm_sans.className}`}>
-                <Navbar />
-                {children}
-<<<<<<< HEAD
-                {/* <Footer /> */}
->>>>>>> a171a4f (Dashboard)
-=======
-                <Footer />
->>>>>>> a9f450d (bugs)
             </body>
         </html>
     );

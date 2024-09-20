@@ -1,18 +1,7 @@
-<<<<<<< HEAD
 import { FaBell, FaClipboardList, FaCreditCard, FaDatabase, FaKey, FaListAlt, FaShoppingCart, FaUser, FaUserAlt } from "react-icons/fa";
 import { MdDashboardCustomize, MdKeyboardArrowDown, MdWork } from "react-icons/md";
 import { TiWorld } from "react-icons/ti";
 import { BiSolidMessageDetail } from "react-icons/bi";
-=======
-import { MdKeyboardArrowDown, MdRocketLaunch, MdSpaceDashboard } from "react-icons/md";
-import { AiFillProject } from "react-icons/ai";
-import { RiMessage3Fill, RiSettings5Fill, RiToolsFill } from "react-icons/ri";
-import { FaUser } from "react-icons/fa";
-import { BiSolidCreditCard, BiWorld } from "react-icons/bi";
-import { PiFilesFill } from "react-icons/pi";
-import { IoIosCart, IoMdListBox } from "react-icons/io";
-import { GrMoney } from "react-icons/gr";
->>>>>>> a171a4f (Dashboard)
 
 const constants = {
     navItems: [
@@ -33,18 +22,6 @@ const constants = {
         { text: "Contact", href: "/contact" },
     ],
 
-<<<<<<< HEAD
-=======
-    //   sidebar items with icons
-    sidebarItems: [
-        { text: "Dashboard", icon: <MdSpaceDashboard />, href: "/dashboard" },
-        { text: "Projects", icon: <AiFillProject />, href: "/dashboard/projects" },
-        { text: "Messages", icon: <RiMessage3Fill />, href: "/dashboard/messages" },
-        { text: "Profile", icon: <RiMessage3Fill />, href: "/dashboard/profile" },
-        { text: "Settings", icon: <FaUser />, href: "/dashboard/settings" },
-    ],
-
->>>>>>> a171a4f (Dashboard)
     signupInputs: [
         {
             label: "Display name",
@@ -79,7 +56,6 @@ const constants = {
             placeholder: "Enter your password",
         },
     ],
-<<<<<<< HEAD
     //   nav items and icons
     sidebarItems: [
         {
@@ -240,163 +216,6 @@ const constants = {
             lastSeen: '4 hours ago',
         },
     ]
-=======
-    // Chart data and options
-    chartOneData: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [
-            {
-                label: 'Active Users',
-                data: [12, 19, 3, 5, 2, 3, 7],
-                fill: false,
-                borderColor: 'rgb(75, 192, 192)',
-                tension: 0.1
-            }
-        ]
-    },
-
-    chartOneOptions: {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            tooltip: {
-                callbacks: {
-                    label: function (context) {
-                        return `${context.dataset.label}: ${context.raw}`;
-                    }
-                }
-            }
-        }
-    },
-
-    chartTwoData: {
-        labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-        datasets: [
-            {
-                label: 'Sales',
-                data: [1500, 2000, 2500, 3000],
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1
-            }
-        ]
-    },
-
-    chartTwoOptions: {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            tooltip: {
-                callbacks: {
-                    label: function (context) {
-                        return `${context.dataset.label}: $${context.raw}`;
-                    }
-                }
-            }
-        }
-    },
-
-    // Tabs constants
-    tabs: [
-        {
-            title: "Today's Money",
-            content: '$53,000',
-            change: 55,
-            icon: <GrMoney />
-        },
-        {
-            title: "Today's Users",
-            content: '$2,300',
-            change: 5,
-            icon: <BiWorld />
-        },
-        {
-            title: "Today's Money",
-            content: '$3,462',
-            change: -2,
-            icon: <IoMdListBox />
-        },
-        {
-            title: "Today's Money",
-            content: '103,430',
-            change: 5,
-            icon: <IoIosCart />
-        },
-    ],
-
-    graphTabs: [
-        {
-            title: "Users",
-            icon: [<PiFilesFill />, 'purple'],
-            content: '36K',
-            progress: 55
-        },
-        {
-            title: "Clicks",
-            icon: [<MdRocketLaunch />, 'blue'],
-            content: '2m',
-            progress: 90
-        },
-        {
-            title: "Sales",
-            icon: [<BiSolidCreditCard />, 'orange'],
-            content: '435$',
-            progress: 30
-        },
-        {
-            title: "Items",
-            icon: [<RiToolsFill />, 'red'],
-            content: '43',
-            progress: 45
-        },
-    ],
-
-    messages: [
-        {
-            id: 1,
-            name: "John Doe",
-            profile: "https://placehold.co/50x50",
-            lastSeen: "2 minutes ago",
-            messages: [
-                "Hey, how are you?",
-                "I'm good, thank you!",
-                "What about you?",
-                "I'm great, thanks!",
-                "See you later!",
-            ],
-        },
-        {
-            id: 2,
-            name: "Agon Kadriu",
-            profile: "https://placehold.co/50x50",
-            lastSeen: "51 minutes ago",
-            messages: [
-                "Hey, how are you?",
-                "I'm good, thank you!",
-                "What about you?",
-                "I'm great, thanks!",
-                "See you later!",
-            ],
-        },
-        {
-            id: 3,
-            name: "Adrijan Koshi",
-            profile: "https://placehold.co/50x50",
-            lastSeen: "4 hours ago",
-            messages: [
-                "Hey, how are you?",
-                "I'm good, thank you!",
-                "What about you?",
-                "I'm great, thanks!",
-                "See you later!",
-            ],
-        },
-    ],
->>>>>>> a171a4f (Dashboard)
 };
 
 export default constants;
